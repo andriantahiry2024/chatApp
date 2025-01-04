@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar";
+import EnvTest from "./components/EnvTest"; // Ajout de l'import
 
 import HomePage from "./pages/HomePage";
 import SignUpPage from "./pages/SignUpPage";
@@ -36,6 +37,11 @@ const App = () => {
   return (
     <div data-theme={theme}>
       <Navbar />
+      
+      {/* Ajout du composant de test en haut de l'application */}
+      <div className="container mx-auto mt-4">
+        <EnvTest />
+      </div>
 
       <Routes>
         <Route path="/" element={authUser ? <HomePage /> : <Navigate to="/login" />} />
