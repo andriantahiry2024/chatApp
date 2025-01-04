@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=production npm run start --prefix backend",
+    "start": "cross-env NODE_ENV=production npm run start --prefix backend",
     "build": "npm run build:frontend && npm run build:backend",
     "build:frontend": "cd frontend && npm install && npm run build",
-    "build:backend": "cd backend && npm install"
+    "build:backend": "cd backend && npm install",
+    "install-all": "npm install && cd frontend && npm install && cd ../backend && npm install"
   },
   "keywords": [],
   "author": "",
